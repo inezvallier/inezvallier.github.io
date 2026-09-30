@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Shop Inez</title>
+<meta name="description" content="Everything Inez wears, with links. She doesn't exist. The clothes do.">
+<link rel="icon" href="inez.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;1,6..96,400&family=Work+Sans:wght@400;500&display=swap">
+<style>
+:root{--paper:#fff;--ink:#1B2240;--muted:#6A6E82;--rule:#E6E3EC;--accent:#C8321E;
+--display:"Bodoni Moda",Didot,Georgia,serif;--body:"Work Sans",system-ui,-apple-system,sans-serif}
+*{box-sizing:border-box}
+body{margin:0;background:var(--paper);color:var(--ink);font:15px/1.5 var(--body)}
+.wrap{max-width:560px;margin:0 auto;padding:32px 16px 56px}
+header{text-align:center;display:grid;gap:10px;justify-items:center;padding-bottom:24px;border-bottom:2px solid var(--ink)}
+header img{width:96px;height:96px;border-radius:50%;object-fit:cover}
+h1{font:400 44px/1 var(--display);margin:0;letter-spacing:-.01em}
+h1 em{color:var(--accent)}
+.tag{font:italic 17px var(--display);color:var(--muted);margin:0}
+.ig{font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:var(--ink)}
+nav{display:flex;gap:8px;overflow-x:auto;padding:16px 0;border-bottom:1px solid var(--rule)}
+nav a{flex:none;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--ink);text-decoration:none;border:1px solid var(--ink);padding:6px 12px}
+.look{padding:28px 0;border-bottom:1px solid var(--rule);display:grid;gap:14px}
+.kicker{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--accent)}
+h2{font:400 30px/1.1 var(--display);margin:0}
+.look img.hero{width:100%;aspect-ratio:4/5;object-fit:cover;background:var(--rule)}
+ul{list-style:none;margin:0;padding:0;border-top:1px solid var(--ink)}
+li a{display:grid;grid-template-columns:1fr auto;gap:12px;padding:12px 2px;border-bottom:1px solid var(--rule);color:var(--ink);text-decoration:none;align-items:baseline}
+li a:hover .n,li a:focus-visible .n{text-decoration:underline;text-decoration-color:var(--accent)}
+.b{display:block;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+.p{font-variant-numeric:tabular-nums;white-space:nowrap}
+.sim{font-size:11px;color:var(--accent);margin-left:6px}
+footer{padding-top:24px;font-size:12px;color:var(--muted);text-align:center;display:grid;gap:6px}
+a:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <img src="inez.jpg" alt="Inez">
+    <h1>Shop Inez<em>.</em></h1>
+    <p class="tag">She has great taste. She doesn't exist. The clothes do.</p>
+    <a class="ig" href="https://www.instagram.com/inezvallier/">@inezvallier</a>
+  </header>
+  <nav id="nav"></nav>
+  <main id="looks"></main>
+  <footer>
+    <span>Inez is an AI-generated character. Every piece is real and available to buy.</span>
+    <span>Some links are affiliate links: if you buy, Inez may earn a small commission at no extra cost to you.</span>
+    <span>Prices checked on the date shown and may change.</span>
+  </footer>
+</div>
+<script>
+/* ADD NEW LOOKS AT THE TOP OF THIS LIST */
+const LOOKS = [
+  {id:"verde", kicker:"Look", title:"Green mohair at the gallery", date:"30 Sept 2026", img:"verde.jpg",
+   items:[
+    {b:"Bimba y Lola", n:"Apple-green mohair cardigan", p:"€123.70", u:"https://www.bimbaylola.com/es_es/cardigan-mohair-boxy-verde-manzana-262BR7313.10527.html"},
+    {b:"Zara", n:"Cotton tee", p:"€7.95", u:"https://www.zara.com/es/es/camiseta-rustica-algodon-p04424306.html?v1=585357968"},
+    {b:"Zara", n:"Straight high-rise jeans", p:"€39.95", u:"https://www.zara.com/es/es/jeans-zw-collection-straight-fit-tiro-alto-p06840262.html?v1=567457038"},
+    {b:"Zara", n:"Croc tassel loafers", p:"€49.95", u:"https://www.zara.com/es/es/mocasin-piel-estampado-p12529710.html?v1=593391404"},
+    {b:"Zara", n:"Resin bangles (pack of 5)", p:"€17.95", u:"https://www.zara.com/es/es/pack-5-pulseras-rigidas-resina-p04736267.html?v1=558015928"},
+    {b:"Parfois", n:"Petal hoops", p:"€8.99", u:"https://www.parfois.com/es/es/bisuteria/pendientes/aros-colgantes-de-petalos/251970.html?dwvar_251970_color=_HM"}
+   ]},
+  {id:"rojo", kicker:"Look", title:"Red knit, studded jeans & tartan", date:"30 Sept 2026", img:"rojo.jpg",
+   items:[
+    {b:"Mango", n:"Polo-collar knit jumper", p:"€29.99", u:"https://shop.mango.com/es/es/p/mujer/jerseis-y-cardigans/jerseis/jersey-punto-cuello-polo/37017787/70/00"},
+    {b:"Zara", n:"Studded straight jeans", p:"€59.95", u:"https://www.zara.com/es/es/jeans-z1975-straight-tiro-medio-tachas-p00108230.html?v1=545454322"},
+    {b:"Bimba y Lola", n:"Tartan patchwork shawl", p:"€75", u:"https://www.bimbaylola.com/es_es/chal-patchwork-marco-tartanes-262BACH41.10354.html"},
+    {b:"Mango", n:"Suede block-heel boots", p:"€49.99", u:"https://shop.mango.com/es/es/p/mujer/zapatos/botas-y-botines/botin-serraje-tacon-bloque/37015989/32/00"}
+   ]},
+  {id:"rugby", kicker:"Look", title:"Rugby stripes & red flats", date:"29 Sept 2026", img:"rugby.jpg",
+   items:[
+    {b:"Zara", n:"Striped contrast polo", p:"€17.95", u:"https://www.zara.com/es/es/camiseta-polo-rayas-contraste-p06462700.html?v1=594400929", similar:true},
+    {b:"Mango", n:"Straight denim shorts", p:"€15.99", u:"https://shop.mango.com/es/es/p/mujer/shorts-y-bermudas/casual/shorts-vaqueros-rectos/37071346/TM/00"},
+    {b:"Parfois", n:"Red leather ballet flats", p:"€39.99", u:"https://www.parfois.com/es/es/zapatos/bailarinas/bailarinas-de-piel-con-banda-elastica/248990.html?dwvar_248990_color=_RD"},
+    {b:"Parfois", n:"Nylon tote with shoulder strap", p:"€19.99", u:"https://www.parfois.com/es/es/bolsos/bolsos-de-mano/bolso-tote-de-nylon-con-bandolera/252476.html?dwvar_252476_color=_EC"},
+    {b:"Parfois", n:"Small gold hoops", p:"€4.99", u:"https://www.parfois.com/es/es/bisuteria/pendientes/pendientes-de-aro-cortos-plateados/160186.html?dwvar_160186_color=_GD"}
+   ]}
+];
+const esc=s=>String(s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+document.getElementById("nav").innerHTML=LOOKS.map(l=>`<a href="#${l.id}">${esc(l.title)}</a>`).join("");
+document.getElementById("looks").innerHTML=LOOKS.map(l=>`<section class="look" id="${l.id}">
+  <span class="kicker">${esc(l.kicker)} · ${esc(l.date)}</span>
+  <h2>${esc(l.title)}</h2>
+  ${l.img?`<img class="hero" src="${l.img}" alt="Inez wearing ${esc(l.title)}" loading="lazy" onerror="this.remove()">`:""}
+  <ul>${l.items.map(i=>`<li><a href="${i.u}" target="_blank" rel="noopener sponsored"><span><span class="b">${esc(i.b)}</span><span class="n">${esc(i.n)}</span>${i.similar?'<span class="sim">similar</span>':""}</span><span class="p">${esc(i.p)}</span></a></li>`).join("")}</ul>
+</section>`).join("");
+</script>
+</body>
+</html>
