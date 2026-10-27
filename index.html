@@ -56,13 +56,33 @@ a:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
 <script>
 /* ADD NEW LOOKS AT THE TOP OF THIS LIST */
 const LOOKS = [
+  {id:"marketmorning", kicker:"Saturday market", title:"Market morning", date:"26 Oct 2026", img:"marketmorning.jpg",
+   items:[
+    {b:"Sézane", n:"Oscar jacket, brown & pink check", p:"€245", u:"https://www.sezane.com/es-es/product/chaqueta-oscar/cuadros-marron-rosa-crudo"},
+    {b:"Massimo Dutti", n:"Wool-blend turtleneck jumper, caldero", p:"€39.95", u:"https://www.massimodutti.com/es/jersey-punto-cuello-cisne-con-lana-l05697579"},
+    {b:"& Other Stories", n:"Straight-leg jeans, mid blue", p:"€99", u:"https://www.stories.com/es-es/product/straight-leg-jeans-mid-blue-1360071001/"},
+    {b:"adidas", n:"Gazelle Stack, fox brown & orange", p:"€90", u:"https://www.adidas.es/zapatilla-gazelle-stack/JS3928.html"},
+    {b:"Gianni Chiarini", n:"Marcella shopper", p:"€270", u:"https://www.giannichiarini.com/es/bolsos/bolsos-shopper/marcella-27131.html"}
+   ]},
+  {id:"fridaytable", kicker:"Inez at home", title:"Friday table", date:"23 Oct 2026", img:"fridaytable.jpg",
+   items:[
+    {b:"Sandro", n:"Argyle wool and cashmere jumper", p:"€325", u:"https://www.elcorteingles.es/moda-mujer/MP_0910053_SFPPU02949-multicolor-pr-jersey-de-mujer-de-lana-y-cachemira-con-motivo-argyle/"},
+    {b:"& Other Stories", n:"Straight-leg jeans, light grey", p:"€65", u:"https://www.stories.com/es-es/product/straight-leg-jeans-light-grey-1318163001/"},
+    {b:"Becara", n:"Kent dining chair, aged oak & linen", p:"€550", u:"https://www.becara.com/en/chairs/3419-kent-chair.html"}
+   ]},
+  {id:"mirrorselfie", kicker:"Mirror selfie", title:"Rust & cream", date:"23 Oct 2026", img:"mirrorselfie.jpg",
+   items:[
+    {b:"Sézane", n:"Victor jumper, rosa granate", p:"€200", u:"https://www.sezane.com/es-es/product/jersey-victor/rosa-granate"},
+    {b:"Mango", n:"Pleated suit trousers, ecru", p:"€39.99", u:"https://shop.mango.com/es/es/p/mujer/pantalones/straight/pantalon-traje-pinzas/37086013/05/00"},
+    {b:"Converse", n:"Chuck 70 Vintage Canvas, parchment", p:"€95", u:"https://www.converse.com/es/shop/p/chuck-70-vintage-canvas-unisex/162056MP.html"}
+   ]},
   {id:"thinkpink", kicker:"Office look", title:"Think pink", date:"22 Oct 2026", img:"thinkpink.jpg",
    items:[
     {b:"Mango", n:"Straight suit blazer with pockets, pink", p:"€79.99", u:"https://shop.mango.com/es/es/p/mujer/blazers/entalladas/blazer-traje-recta-bolsillos/37094471/85/00"},
     {b:"Mango", n:"Straight suit trousers, pink", p:"€49.99", u:"https://shop.mango.com/es/es/p/mujer/pantalones/straight/pantalon-traje-recto/37044472/85/00"},
     {b:"Arket", n:"Signature T-shirt, white", p:"€39", u:"https://www.arket.com/es-es/product/heavyweight-t-shirt-white-1135758001/"},
     {b:"Weekend Max Mara", n:"Fringed wool shawl, anthracite", p:"€159", u:"https://es.maxmara.com/p-5746046506009-wkatornado-antracita"},
-    {b:"Vans", n:"Old Skool sneakers, black", p:"€85", u:"https://www.vans.com/es-es/p/zapatillas-old-skool-VN000D3HY28"}
+    {b:"Vans", n:"Insulated Sk8-Hi sneakers, grey", p:"€120", u:"https://www.vans.com/es-es/p/zapatillas-aislantes-sk8-hi-VN000Y611O7"}
    ]},
   {id:"argyleseason", kicker:"The Edit", title:"Argyle season", date:"22 Oct 2026", img:"argyleseason.jpg",
    items:[
