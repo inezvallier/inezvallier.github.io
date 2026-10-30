@@ -351,8 +351,11 @@ const LOOKS = [
    ]}
 ];
 const esc=s=>String(s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
-document.getElementById("nav").innerHTML=LOOKS.map(l=>`<a href="#${l.id}">${esc(l.title)}</a>`).join("");
-document.getElementById("looks").innerHTML=LOOKS.map(l=>`<section class="look" id="${l.id}">
+/* Only show looks whose date has arrived (Madrid time). Looks dated in the future stay hidden until that day. */
+const TODAY=new Date(new Date().toLocaleString("en-US",{timeZone:"Europe/Madrid"}));TODAY.setHours(23,59,59);
+const LIVE=LOOKS.filter(l=>{const d=new Date(l.date);return isNaN(d)||d<=TODAY;});
+document.getElementById("nav").innerHTML=LIVE.map(l=>`<a href="#${l.id}">${esc(l.title)}</a>`).join("");
+document.getElementById("looks").innerHTML=LIVE.map(l=>`<section class="look" id="${l.id}">
   <span class="kicker">${esc(l.kicker)} · ${esc(l.date)}</span>
   <h2>${esc(l.title)}</h2>
   ${l.img?`<img class="hero" src="${l.img}" alt="Inez wearing ${esc(l.title)}" loading="lazy" onerror="this.remove()">`:""}
